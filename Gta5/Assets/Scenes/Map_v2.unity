@@ -36567,7 +36567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361012431}
   m_Layer: 0
-  m_Name: Orbitss
+  m_Name: Orbits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
