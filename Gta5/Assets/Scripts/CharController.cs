@@ -23,15 +23,32 @@ public class CharController : MonoBehaviour
         {
             anim.SetBool("Punch", false);
         }
-        if(Input.GetKey(KeyCode.LeftShift)) 
+        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W)) 
         {
             karekterHiz = 10;
             anim.SetBool("IsRuning", true);
+            anim.SetBool("LeftRun", false);
+            anim.SetBool("RightRun", false);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.D))
+        {
+            karekterHiz = 10;
+            anim.SetBool("RightRun", true);
+            anim.SetBool("LeftRun", false);
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.A))
+        {
+            karekterHiz = 10;
+            anim.SetBool("LeftRun", true);
+            anim.SetBool("RightRun", false);
+
         }
         else
         {
             karekterHiz = 5;
             anim.SetBool("IsRuning", false);
+            anim.SetBool("RightRun", false);
+            anim.SetBool("LeftRun", false);
         }
     }
     void Hareket()
